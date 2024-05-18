@@ -56,7 +56,7 @@ class Transaksi extends Component
         $this->qty=1;
     }
 
-    public function delete($detiltansaksi_id)
+    public function delete($detiltransaksi_id)
     {
         $detiltransaksi=Detiltransaksi::find($detiltransaksi_id);
         $detiltransaksi->delete();
