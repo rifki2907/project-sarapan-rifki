@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Sarapan extends Model
 {
     use HasFactory;
-    protected $fillable=['name','stock','price','sarapan_id','description'];
+    protected $fillable=['name','stock','price','description'];
     public function detiltransaksi():BelongsTo
     {
         return $this->belongsTo(Detiltransaksi::class);

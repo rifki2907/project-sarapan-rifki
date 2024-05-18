@@ -3,14 +3,14 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\Transaksis;
+use App\Models\Transaksi;
 use App\Models\Detiltransaksi;
 use App\Models\Sarapan;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
-class Transaksi extends Component
+class Transaksis extends Component
 {
     public $total;
     public $transaksi_id;
@@ -24,9 +24,9 @@ class Transaksi extends Component
 
         $this->total=$transaksi->total;
         $this->kembali=$this->uang-$this->total;
-        return view('livewire.transaksi')
+        return view('livewire.transaksis')
         ->with("data", $transaksi)
-        ->with("dataSarapan", Pembeli::where('stock','>','0')->get())
+        ->with("dataSarapan", Sarapan::where('stock','>','0')->get())
         ->with("dataDetiltransaksi",Detiltransaksi::where('transaksi_id','=',$transaksi->id)->get());
     }
 

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Detiltransaksi extends Model
 {
     use HasFactory;
@@ -14,8 +15,5 @@ class Detiltransaksi extends Model
         return $this->belongsTo(Transaksi::class);
     }
 
-    public function sarapan():HasMany
-    {
-        return $this->hasMany(Sarapan::class);
-    }
+    
 }
