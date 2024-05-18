@@ -93,7 +93,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>name Sarapan</th>
+                                <th>Nama Sarapan</th>
                                 <th>Harga</th>
                                 <th>Jumlah</th>
                                 <th>Sub Total</th>
@@ -102,7 +102,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($dataOrderDetail as $dt)
+                            @foreach($dataDetiltransaksi as $dt)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $dt->sarapan->name }}</td>

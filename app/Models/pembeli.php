@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasMany;
 class Pembeli extends Model
 {
     use HasFactory;
-    protected $fillable=['name','email','hp','alamat'];
+    protected $fillable=['name','hp','alamat'];
     
     public function transaksi():HasMany
     {

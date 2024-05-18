@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Livewire;
-use App\Models\Transaksis;
+
 use Livewire\Component;
 
 use App\Models\Detiltransaksi;
@@ -82,7 +82,7 @@ class Transaksi extends Component
         //update stok
         $detiltransaksi = Detiltransaksi::select('*')->where('transaksi_id','=',$id)->get();
         //dd($order)detail
-        foreach ($order_detail as $od) {
+        foreach ($detiltransaksi as $od) {
             $stocklama = Sarapan::select('stock')->where('id','=',$od->sarapan_id)->sum('stock');
             $stock = $stocklama - $od->qty;
             try {
