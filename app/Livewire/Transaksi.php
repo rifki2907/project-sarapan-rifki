@@ -3,7 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-
+use App\Models\Transaksis;
 use App\Models\Detiltransaksi;
 use App\Models\Sarapan;
 use Exception;
