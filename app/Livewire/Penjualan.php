@@ -25,7 +25,7 @@ class Penjualan extends Component
         ]);
     
 
-    Transaksi::create([
+    Transaksis::create([
         'invoice'=>$this->invoice(),
         'pembeli_id'=>$this->pembeli_id,
         'user_id'=>Auth::user()->id,
@@ -37,7 +37,7 @@ class Penjualan extends Component
 
     public function invoice()
     {
-        $pembeli=Transaksi::orderBy('created_at','DESC');
+        $pembeli=Transaksis::orderBy('created_at','DESC');
         if($pembeli->count()>0){
             $pembeli=$pembeli->first();
             $explode=explode('-',$pembeli->invoice);
